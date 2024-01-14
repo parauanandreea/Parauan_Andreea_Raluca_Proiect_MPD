@@ -1,0 +1,58 @@
+﻿@page
+@model Parauan_Andreea_Raluca_Proiect_MPD.Pages.Proiecte.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Proiect_MPD</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Proiect_MPD.Titlu)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Proiect_MPD.Titlu)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Proiect_MPD.Cod_apel)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Proiect_MPD.Cod_apel)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Proiect_MPD.Tip_apel)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Proiect_MPD.Tip_apel)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Proiect_MPD.Regiunea_de_dezvoltare)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Proiect_MPD.Regiunea_de_dezvoltare)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Proiect_MPD.Data_publicarii_ghidului)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Proiect_MPD.Data_publicarii_ghidului)
+        </dd>
+        <dd class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Proiect_MPD.Fondul_Structural)
+        </dd>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Proiect_MPD.Fondul_Structural)
+        </dd>
+        <dd class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Proiect_MPD.Tip_ajutor)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Proiect_MPD?.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

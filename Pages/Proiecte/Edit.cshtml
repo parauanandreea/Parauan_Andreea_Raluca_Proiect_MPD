@@ -1,0 +1,74 @@
+﻿@page
+@model Parauan_Andreea_Raluca_Proiect_MPD.Pages.Proiecte.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Proiect_MPD</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Proiect_MPD.ID" />
+            <div class="form-group">
+                <label asp-for="Proiect_MPD.Titlu" class="control-label"></label>
+                <input asp-for="Proiect_MPD.Titlu" class="form-control" />
+                <span asp-validation-for="Proiect_MPD.Titlu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Proiect_MPD.Cod_apel" class="control-label"></label>
+                <input asp-for="Proiect_MPD.Cod_apel" class="form-control" />
+                <span asp-validation-for="Proiect_MPD.Cod_apel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Proiect_MPD.Tip_apel" class="control-label"></label>
+                <input asp-for="Proiect_MPD.Tip_apel" class="form-control" />
+                <span asp-validation-for="Proiect_MPD.Tip_apel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Proiect_MPD.Regiunea_de_dezvoltare" class="control-label"></label>
+                <input asp-for="Proiect_MPD.Regiunea_de_dezvoltare" class="form-control" />
+                <span asp-validation-for="Proiect_MPD.Regiunea_de_dezvoltare" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Proiect_MPD.Data_publicarii_ghidului" class="control=label"></label>
+                <input asp-for="Proiect_MPD.Data_publicarii_ghidului" class="form-control" />
+                <span asp-validation-for="Proiect_MPD.Data_publicarii_ghidului" class="text-danger">
+                </span>
+            </div>
+            <div class="form-group"
+            <label asp-for="Proiect_MPD.Fondul_StructuralID" class="control-label">Fondul Structural </label>
+            <select asp-for="Proiect_MPD.Fondul_StructuralID" class="form-control"asp-items="ViewBag.Fondul_StructuralID">
+            </select>
+            <span asp-validation-for="Proiect_MPD.Fondul_StructuralID" class="text-danger">
+
+            </span>
+            </div>
+            <div>
+                <label asp-for="Proiect_MPD.Tip_ajutorID" class="control-label">Tip Ajutor</label>
+                <select asp-for="Proiect_MPD.Tip_ajutorID" class="form-control" asp-items="ViewBag.Tip_ajutorID"></select>
+                <span asp-validation-for="Proiect_MPD.Tip_ajutorID" class="text-danger"></span>
+            </div>
+            <div>
+                <label asp-for="Proiect_MPD.Proiect_depusID" class="control-label">Proiectul a fost depus?</label>
+                <select asp-for="Proiect_MPD.Proiect_depusID" class="form-control" asp-items="ViewBag.Proiect_depusID"></select>
+                <span asp-validation-for="Proiect_MPD.Proiect_depusID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

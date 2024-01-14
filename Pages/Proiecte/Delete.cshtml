@@ -1,0 +1,70 @@
+﻿@page
+@model Parauan_Andreea_Raluca_Proiect_MPD.Pages.Proiecte.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Proiect_MPD</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Proiect_MPD.Titlu)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Proiect_MPD.Titlu)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Proiect_MPD.Cod_apel)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Proiect_MPD.Cod_apel)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Proiect_MPD.Tip_apel)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Proiect_MPD.Tip_apel)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Proiect_MPD.Regiunea_de_dezvoltare)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Proiect_MPD.Regiunea_de_dezvoltare)
+        </dd>
+        <dd class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Proiect_MPD.Data_publicarii_ghidului)
+        </dd>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model=>model.Proiect_MPD.Data_publicarii_ghidului)
+        </dd>
+        <dd class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Proiect_MPD.Fondul_Structural)
+        </dd>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model=>model.Proiect_MPD.Fondul_Structural)
+        </dd>
+        <dd class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Proiect_MPD.Tip_ajutor)
+        </dd>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model=>model.Proiect_MPD.Tip_ajutor)
+        </dd>
+        <dd class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Proiect_MPD.Proiect_depus)
+        </dd>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Proiect_MPD.Proiect_depus)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Proiect_MPD.ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>
